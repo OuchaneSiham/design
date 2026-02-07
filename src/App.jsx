@@ -4,7 +4,8 @@ import {GoogleOAuthProvider} from '@react-oauth/google'
 import Login from "./pages/LoginPage";
 import PrivacyPage from "./pages/PrivacyPolicy";
 import SignUp from "./pages/signUpPage";
-// import Google from "./hooks/Auth/Google";
+import Profile from "./hooks/Auth/Profile";
+import Google from "./hooks/Auth/Google";
 
 export default function App()
 {
@@ -13,12 +14,8 @@ export default function App()
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
         </Routes>
-      {/* <GoogleOAuthProvider clientId="470373993744-tjq6l6bk7ikvbvl46vpbd12pcqepuctb.apps.googleusercontent.com">
-            <Google>
-            </Google>
-          </GoogleOAuthProvider>
-        */}
       </>
     );
 }
