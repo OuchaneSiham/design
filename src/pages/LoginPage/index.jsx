@@ -5,7 +5,7 @@ import SocialButton from '../../component/ui/SocialButton';
 import PrivacyPolicy from '../../component/ui/PrivacyPolicy';
 
 
-export default function Login(){
+export default function Login({ isAdmin = false }){
 
 
     return(
@@ -16,7 +16,7 @@ export default function Login(){
                             bg-[#18181C]/100 space-y-9 px-4
                             rounded-4xl border-1 border-[#3D3229] '>
                 <Logo/>
-                <LoginForm/>
+                <LoginForm isAdminLogin={isAdmin}/>
                 <RedirectionLine text="new Here ?" link="/signup" linkText="create new account"/>
                 <SocialButton/>
                 <PrivacyPolicy/>
